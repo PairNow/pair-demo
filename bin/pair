@@ -1,0 +1,5 @@
+#!/bin/sh
+SHELL=/root/pair-demo/bin/env tmux new-session -s pair
+
+# sending keys with enter to tmux
+#tmux send-keys -t pair 'echo "did it"' C-m

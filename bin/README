@@ -1,0 +1,33 @@
+https://github.com/Lokaltog/powerline
+http://ricochen.wordpress.com/2011/11/14/tmux-techniques-by-example/
+http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/tmux.1?query=tmux&sec=1#KEY+BINDINGS
+#!/bin/bash                                                                                                                             
+tmux start-server
+tmux new-session -d -s my_server -n runstuff
+tmux new-window -t my_server:1 -n someotherjunk
+
+tmux send-keys -t my_server:0 "cd /etc" C-m
+tmux send-keys -t my_server:1 "./yolo" C-m
+
+tmux select-window -t my_server:runstuff
+tmux attach-session -t my_server
+
+https://wiki.archlinux.org/index.php/tmux
+
+http://manpages.ubuntu.com/manpages/precise/en/man1/tmux.1.html
+
+
+tmux has-session -t development
+if [ $? != 0 ] then
+    tmux new-session -s development -n editor -d
+    tmux send-keys -t development 'cd /var/www/htdocs/' C-m
+    tmux send-keys -t development 'vim' C-m
+    tmux split-window -v -t development
+    tmux split-window -v -t development
+    tmux select-layout -t development main-horizontal
+    tmux send-keys -t development:0.1 'cd /var/www/htdocs/' C-m
+    tmux new-window -n console -t development
+    tmux send-keys -t development:1 'cd /var/www/htdocs/' C-m
+    tmux select-window -t development:0
+fi
+tmux attach -t development

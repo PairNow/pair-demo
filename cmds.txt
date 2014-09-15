@@ -1,0 +1,85 @@
+    1  exit
+    2  tmux
+    3  pair
+    4  mkdir bin
+    5  vi .bash_profile
+    6  touch bin/pair
+    7  vi bin/pair 
+    8  pair
+    9  exit
+   10  pair
+   11  chmod 777 bin/pair 
+   12  pair
+   13  vi bin/pair 
+   14  pair
+   15  vi bin/pair 
+   16  pair
+   17  vi bin/pair 
+   18  pair
+   19  vi bin/pair 
+   20  pair
+   21  pair
+   22  vi bin/pair 
+   23  pair
+   24  vi bin/pair 
+   25  pair
+   26  pair
+   27  tmux attach -t pair
+   28  tmux send-keys -t pair 'echo "wow"'
+   29  tmux attach -t pair
+   30  pair
+   31  tmux new-session -s pair -d
+   32  tmux send-keys -t pair 'echo "wow"'
+   33  tmux attach -t pair
+   34  tmux send-keys -t pair 'echo "wow"' 
+   35  tmux attach -t pair
+   36  tmux send-keys -t pair 'echo "wow"' 
+   37  tmux send-keys -t pair 'echo "wow"' 
+   38  tmux attach -t pair
+   39  tmux send-keys -t pair 'echo "wow"' \n
+   40  tmux attach -t pair
+   41  tmux send-keys -t pair 'echo "wow"' C-m
+   42  tmux attach -t pair
+   43  tmux send-keys -t pair 'echo "did it"' C-m
+   44  tmux attach -t pair
+   45  vi bin/env
+   46  chmod 777 bin/env 
+   47  vi bin/env
+   48  SHELL=/root/bin/env tmux 
+   49  SHELL=/root/bin/env tmux new-session -s pair 
+   50  vi bin/pair 
+   51  SHELL=/root/bin/env tmux new-session -s pair 
+   52  vi bin/pair 
+   53  vi bin/tmux.conf
+   54  vi bin/tmux.conf
+   55  vi README
+   56  pip install --user git+git://github.com/Lokaltog/powerline
+   57  apt-get install python-pip
+   58  pip install --user git+git://github.com/Lokaltog/powerline
+   59  python
+   60  apt-get install python-pip
+   61  apt-get install python
+   62  apt-get install python-dev
+   63  git
+   64  apt-get install git
+   65  ls
+   66  mv README bin/
+   67  cp .bash_profile bin/
+   68  git clone https://github.com/DemandCube/pair-demo.git
+   69  cd pair-demo/
+   70  ls
+   71  vi README.md 
+   72  git add README.md 
+   73  git commit README.md 
+   74  git config --global user.email "steve.morin@gmail.com"
+   75  git config --global user.name "Steve Morin"
+   76  git commit README.md 
+   77  echo $EDITOR
+   78  echo $EDIT
+   79  git push 
+   80  ls
+   81  cd ..
+   82  ls
+   83  mv bin/ pair-demo/
+   84  cd pair-demo/
+   85  history > cmds.txt 
